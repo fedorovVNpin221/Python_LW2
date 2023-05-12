@@ -17,8 +17,8 @@ HELP_COMMAND = """
 START_COMMAND = """Этот бот - агрегатор лекарственных препаратов в аптеках города Омска. 
 Чтобы найти информацию о необходимом препарате отправьте боту сообщение с его названием."""
 
-FARMA_COMMAND = """Для поиска в сети аптек "Фармакопейка" 
-отправьте боту сообщение с названием лекарственного средства"""
+FILE_NOT_FOUND = """
+По вашему запросу ничего не найдено. Некорректно введено название препарата."""
 
 @disp.message_handler(commands= ['start'])
 async def start_command(message: types.Message):
@@ -37,8 +37,3 @@ async def on_startup(_):
 
 if __name__ == '__main__':
     executor.start_polling(dispatcher=disp, skip_updates=True, on_startup=on_startup)
-
-
-#@disp.message_handler(commands= ['farmakopeika'])
-#async def farma(message: types.Message):
-#    await message.answer(text = FARMA_COMMAND)
