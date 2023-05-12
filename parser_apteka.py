@@ -27,10 +27,4 @@ def parse(name1):
     treat_info = treat_info.replace('аптека\n', 'аптека' + medic + '\n\n')
     treat_info = treat_info.replace('В аптеках:\n', 'В аптеках: ')
     treat_info = treat_info.replace('На складе:\n', 'На складе: ')
-    card1 = ''
-    #for data1 in treat_info:
-     #   if data1.find(medic or 'В аптеках: ' + cross):
-       #     card1 = data1
-      #  break
-    #print(treat_info)
     return treat_info
